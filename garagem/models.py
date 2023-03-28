@@ -38,4 +38,4 @@ class Veiculo(models.Model):
     preco = models.DecimalField(max_digits=10, decimal_places=3, default=0, blank=True, null=True)
 
     def __str__(self):
-        return f"{self.modelo} ({self.id}) "
+        return f"{self.modelo} ({self.id})  "
