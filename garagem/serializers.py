@@ -22,7 +22,18 @@ class CorSerializer(ModelSerializer):
         model = Cor
         fields = "__all__"
 
-class VeiculoSerializer(ModelSerializer):    
+class VeiculoSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
         fields = "__all__"
+
+class VeiculoListSerializer(ModelSerializer):    
+    class Meta:
+        model = Veiculo
+        fields = ["id", "modelo", "marca", "categoria"]
+
+class VeiculoDetailSerializer(ModelSerializer):
+    class Meta:
+        model = Veiculo
+        fields = "__all__"
+        depth = 1 
