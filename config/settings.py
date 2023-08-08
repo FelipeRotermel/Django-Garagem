@@ -1,3 +1,4 @@
+import os
 """
 Django settings for config project.
 
@@ -39,7 +40,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'garagem',
     "rest_framework",
+    "usuario",
+    "uploader",
+    "drf_spectacular",
 ]
+
+AUTH_USER_MODEL = "usuario.Usuario"
+
+MEDIA_URL = "http://localhost:8000/media/"
+MEDIA_ENDPOINT = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+FILE_UPLOAD_PERMISSIONS = 0o640
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,3 +134,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Veiculo API",
+    "DESCRIPTION": "API para gerenciamento da garagem, incluindo endpoints e documentação.",
+    "VERSION": "1.0.0",
+}

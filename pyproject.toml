@@ -1,5 +1,3 @@
-[tool.pdm]
-
 [project]
 name = ""
 version = ""
@@ -8,8 +6,12 @@ authors = [
     {name = "Felipe", email = "ll.ll@gmail.com"},
 ]
 dependencies = [
-    "django>=4.1.7",
+    "django>=4.2.4",
     "djangorestframework>=3.14.0",
+    "setuptools>=68.0.0",
+    "python-magic>=0.4.27",
+    "Pillow>=10.0.0",
+    "drf-spectacular>=0.26.4",
 ]
 requires-python = ">=3.10"
 license = {text = "MIT"}
