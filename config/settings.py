@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',''''''''
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "usuario",
     "uploader",
     "drf_spectacular",
+    "django_extensions",
 ]
 
 AUTH_USER_MODEL = "usuario.Usuario"
